@@ -23,8 +23,13 @@ body{
     font-family: var(--fontFamikySecondary);
     line-height: 1.5em;
 }
+section img{
+    opacity: 0.8;
+    transition: 200ms linear;
+}
 section img:hover{
-    background-position: center left;
+    opacity: 1;
+    transition: 200ms linear;
 }
 .container{
     margin-inline: 5%;
@@ -45,7 +50,7 @@ section{
 .aside{
     text-align: end;
 }
-.main_text p{
+.main_text p, footer p{
     color: #e7e8e994;
 }
 a, li{
@@ -132,6 +137,7 @@ footer h2{
     display: block;
     position: fixed;
     width: 100%;
+    z-index: 1;
     }
     nav img{
         margin-inline-start: 5%;
@@ -202,6 +208,7 @@ footer h2{
     width: 100%;
     margin: 0 auto;
     top: -10px;
+    z-index: 1;
     }
     main{
         display: flex;
