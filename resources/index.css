@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&family=Lobster&family=Lobster+Two:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    --fontFamilyPrimary:'Lobster', cursive;
+    --fontSizePrimary:64px;
+    --fontWeightPrimary:700;
+    --fontFamikySecondary: 'Poppins', sans-serif;
+    --fontWeightsecondary:400;
+    --fontSizeSecondary:18px;
+    --fontColorLightWhite:#e7e8e9;
+    --fontColordark:#1b1c1e;
+    --bgColor:#1E1E1E;
+}
+h2, h3{
+    font-family: var(--fontFamilyPrimary);
+}
+footer h2, .tribute h3{
+    font-family: var(--fontFamikySecondary);
+}
+body{
+    background: var(--bgColor);
+    font-family: var(--fontFamikySecondary);
+    line-height: 1.5em;
+}
+section img:hover{
+    background-position: center left;
+}
+.container{
+    margin-inline: 5%;
+    margin-block-start: 3%;
+}
+section{
+    padding-bottom: 20px;
+}
+.main_text h1{
+    font-size: 2.5rem;
+    line-height: 1em;
+    font-family: var(--fontFamilyPrimary);
+    color: var(--fontColorLightWhite);
+}
+.main_text .aside p:first-child{
+    color: var(--fontColorLightWhite);
+}
+.aside{
+    text-align: end;
+}
+.main_text p{
+    color: #e7e8e994;
+}
+a, li{
+    list-style: none;
+    text-decoration: none;
+    color: var(--fontColorLightWhite);
+}
+header .main_image img{
+    width: 100%;
+}
+.main_text-image{
+    display: grid;
+    place-content: center;
+    margin-block: 3%;
+}
+nav img, footer img{
+    width: 40px;
+}
+/*showcase section*/
+section{
+    background-color: #f3f3f3;
+    padding-block-start:10px;
+}
+.section_moreText h3{
+    margin-block-start: 1em;
+}
+.section_showcase img{
+    width: 100%;
+    margin-block: 10px;
+}
+/**/
+nav,.timeline_toptext h3:last-child, .tribute_heroText h3:nth-child(2) {
+    display: none;
+}
+.span img, .tribute img{
+    width: 100%;
+}
+.span{
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+.tribute, 
+.tribute .message,
+.span, .tribute h3,
+.span h3, .span p{
+    margin-block-start: 1em;
+}
+.tribute_heroText, .timeline_toptext{
+    display: flex;
+    justify-content: space-between;
+}
+a:hover{
+    color: #1fa;
+    transition: 200ms  steps(1);
+}
+.tribute{
+    background-color: var(--bgColor);
+    color: var(--fontColorLightWhite);
+    text-align: start;
+    margin: 0 auto;
+    max-width: 400px;
+}
+footer{
+    margin-block-start: 50px;
+    padding: 30px 0;
+    border-top:1px solid var(--fontColorLightWhite);
+    text-align: center;
+}
+footer h2{
+    color: var(--fontColorLightWhite);
+}
+.fa-dove{
+    color: oldlace;
+}
+.fa-heart{
+    color: rgba(223, 18, 18, 0.849);
+}
+@media screen and (max-width:46.9em){
+    header{
+        margin-block-end: 7%;
+    }
+    nav{
+    display: block;
+    position: fixed;
+    width: 100%;
+    }
+    nav img{
+        margin-inline-start: 5%;
+    }
+    ul{
+    background-color: var(--bgColor);
+    text-align: center;
+    scale: 0;
+    width: 100%;
+    transform: translateY(-500px);
+    border-radius: 50%;
+    transition: 200ms ease-in-out;
+    }
+    .open{
+    scale: 1;
+    border-radius: 0%;
+    transition: 400ms linear;
+    transform: translateY(0px);
+    transition: 200ms ease;
+    }
+    li{
+    padding: 10px 0;
+    }
+    .menu, i{
+    transition: 200ms linear;
+    font-size: 30px;
+    color: var(--fontColorLightWhite);
+    }
+    .xmenu{
+    transition: 200ms linear;
+    transform: rotate(360deg);
+    }
+    .menu{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    
+    position: absolute;
+    background-color:var(--bgColor);
+    z-index: 1;
+    margin: 1% 0 0 1%;
+    }
+    nav img{
+        display: none;
+    }   
+}
+@media screen and (min-width:47em){
+    nav,.timeline_toptext h3:last-child, .tribute_heroText h3:nth-child(2) {
+    display: block;
+    }
+    ul{
+    display: flex;
+    gap: 1vw;
+    }
+    .header__nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    nav{
+    border-bottom: 1px solid black;
+    background-color: var(--bgColor);
+    padding: .5em 0;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    top: -10px;
+    }
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .main_text{
+        width: 100%;
+        max-width: 550px;
+    }
+    .main_text h1{
+        font-size: 4.3vmax;
+    }
+    .showcase_top, .showcase_end{
+        display: flex;
+        justify-content: space-between;
+        margin-block: 10px;
+    }
+    .section_moreText, .section_showcase .showcase_top p{
+        font-size: 18px;
+        line-height: 30px;
+        width: 35%;
+    }
+    .section_moreText h3{
+        margin-block-start: 1.7em;
+    }
+    .section_showcase img{
+        width:auto;
+    }  
+    .timeline_section, .message__content{
+    display: flex;
+    justify-content: space-between;
+    }
+    .span{
+    width: 30%;
+    }
+    .tribute_message{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+    .message{
+        width: 45%;
+    }
+    .message__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .span{
+        margin:1em 0;
+    }
+    .tribute{
+        max-width: 100%;
+    }
+    .message__content img{
+        width: 30%;
+    }
+    .message__content p{
+        width: 65%;
+    } 
+    /*
+    /*.showcase_top{
+        width: 100%;
+    }
+    .showcase_top p{
+        width: 20%;
+        border: 1px solid red;
+    }*/
+    .showcase_image{
+        display: flex;
+        justify-content: space-between;
+        width: 63%;
+    }
+    .showcase_top img:first-child{
+        width: 40%;
+    }
+    .showcase_top img:last-child{
+        width: 55%;
+    }
+    .showcase_end img:first-child{
+        width: 20%;
+    }
+    .showcase_end img:last-child{
+        width: 30%;
+    }
+    .section_moreText h3{
+        margin-top: 1vw;
+    }
+    .showcase_end .section_moreText{
+        width: 45%;
+    }
+    nav{
+        top: -30px;
+    }
+    nav .menu{
+        display: none;
+    }
+}  
